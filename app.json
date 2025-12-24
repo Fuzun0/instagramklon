@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "Instagram Clone",
+    "slug": "instagram-clone",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.instagram.clone"
+    },
+    "android": {
+      "package": "com.instagram.clone"
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
