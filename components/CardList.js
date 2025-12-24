@@ -4,10 +4,11 @@ import Card from './Card';
 
 const keyExtractor = (item) => item.id.toString();
 
-const CardList = ({ items = [], onPressComments }) => {
+const CardList = ({ items = [], onPressComments, commentsForItem = {} }) => {
   const renderItem = (info) => {
     const { item = {} } = info;
     const author = item.author || {};
+    const commentCount = (commentsForItem[item.id] || []).length;
     
     return (
       <Card
@@ -16,6 +17,7 @@ const CardList = ({ items = [], onPressComments }) => {
         initials={author.initials || '?'}
         backgroundColor={author.backgroundColor || '#6200EE'}
         onPressComments={() => onPressComments && onPressComments(item)}
+        commentCount={commentCount}
       />
     );
   };

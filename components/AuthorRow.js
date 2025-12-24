@@ -7,7 +7,8 @@ const AuthorRow = ({
   size = 35,
   backgroundColor = '#6200EE',
   initials = '?',
-  onPressComments 
+  onPressComments,
+  commentCount = 0
 }) => {
   return (
     <View style={styles.container}>
@@ -18,7 +19,9 @@ const AuthorRow = ({
       />
       <Text style={styles.text}>{fullname}</Text>
       <TouchableOpacity onPress={onPressComments}>
-        <Text style={styles.commentsText}>Comments</Text>
+        <Text style={styles.commentsText}>
+          Comments {commentCount > 0 && `(${commentCount})`}
+        </Text>
       </TouchableOpacity>
     </View>
   );

@@ -7,7 +7,8 @@ const Card = ({
   imageUri,
   initials = '?',
   backgroundColor = '#6200EE',
-  onPressComments
+  onPressComments,
+  commentCount = 0
 }) => {
   const [loading, setLoading] = useState(true);
 
@@ -22,6 +23,7 @@ const Card = ({
         initials={initials}
         backgroundColor={backgroundColor}
         onPressComments={onPressComments}
+        commentCount={commentCount}
       />
       <View style={styles.imageContainer}>
         <Image

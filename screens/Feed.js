@@ -61,7 +61,11 @@ const Feed = ({ commentsForItem = {}, onPressComments }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <CardList items={items} onPressComments={handlePressComments} />
+      <CardList 
+        items={items} 
+        onPressComments={handlePressComments}
+        commentsForItem={commentsForItem}
+      />
     </SafeAreaView>
   );
 };
